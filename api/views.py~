@@ -1,0 +1,15 @@
+ class Meta:
+        model = Sensors
+        fields = ['id', 'type', 'installed_date', 'vehicle']
+
+
+class MaintenanceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Maintenance
+        fields = ['id', 'service_type', 'service_date', 'vehicle']
+
+
+class ServiceCentersSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ServiceCenters
+        fields = ['id', 'name', 'address', 'rating']
